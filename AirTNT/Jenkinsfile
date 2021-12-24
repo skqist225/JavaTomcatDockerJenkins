@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Create Tomcat Docker Image') {
             steps {
-                sh "docker build ./AirTNT -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "sudo docker build ./AirTNT/Dockerfile -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
